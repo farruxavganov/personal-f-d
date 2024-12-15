@@ -2,7 +2,7 @@ import React from "react";
 import { FinanceProvider } from "./context/FinanceContext";
 import CurrencyConverter from "./components/CurrencyConverter";
 import TransactionForm from "./components/TransactionForm";
-//import TransactionList from "./components/TransactionList";
+import TransactionList from "./components/TransactionList";
 //import Summary from "./components/Summary";
 //import Charts from "./components/Charts";
 import "bootstrap/dist/css/bootstrap.min.css";
@@ -15,6 +15,7 @@ const App = () => {
                 <h1 className="text-center my-4">Personal Finance Dashboard</h1>
                 <CurrencyConverter />
                 <TransactionForm />
+                <TransactionList />
             </div>
         </FinanceProvider>
     );
