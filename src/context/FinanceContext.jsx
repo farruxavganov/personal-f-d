@@ -14,7 +14,7 @@ export const FinanceProvider = ({ children }) => {
         const fetchRates = async () => {
             try {
                 const response = await fetch(
-                    `https://v6.exchangerate-api.com/v6/YOUR_API_KEY/latest/${baseCurrency}`
+                    `https://v6.exchangerate-api.com/v6/1229f5c276bf8f67178a24e8/latest/${baseCurrency}`
                 );
                 const data = await response.json();
                 setCurrencyRates(data.conversion_rates);

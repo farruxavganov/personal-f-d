@@ -4,7 +4,7 @@ import CurrencyConverter from "./components/CurrencyConverter";
 import TransactionForm from "./components/TransactionForm";
 import TransactionList from "./components/TransactionList";
 import Summary from "./components/Summary";
-//import Charts from "./components/Charts";
+import Charts from "./components/Charts";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./App.css";
 
@@ -17,6 +17,7 @@ const App = () => {
                 <TransactionForm />
                 <TransactionList />
                 <Summary />
+                <Charts />
             </div>
         </FinanceProvider>
     );
