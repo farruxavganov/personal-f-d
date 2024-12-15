@@ -5,6 +5,7 @@ import TransactionForm from "./components/TransactionForm";
 import TransactionList from "./components/TransactionList";
 import Summary from "./components/Summary";
 import Charts from "./components/Charts";
+import ExchangeRates from "./components/ExchangeRates";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./App.css";
 
@@ -18,6 +19,7 @@ const App = () => {
                 <TransactionList />
                 <Summary />
                 <Charts />
+                <ExchangeRates />
             </div>
         </FinanceProvider>
     );
