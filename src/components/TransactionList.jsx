@@ -1,22 +1,19 @@
 import React, { useContext, useState } from "react";
 import { FinanceContext } from "../context/FinanceContext";
+import { CSSTransition, TransitionGroup } from "react-transition-group";
+import "./TransactionList.css"; // Add a CSS file for animations
 
 const TransactionList = () => {
     const { transactions } = useContext(FinanceContext);
 
-    // States for filters
     const [filterCategory, setFilterCategory] = useState("All");
     const [startDate, setStartDate] = useState("");
     const [endDate, setEndDate] = useState("");
 
-    // Filtered transactions based on selected filters
     const filteredTransactions = transactions.filter((transaction) => {
-        // Filter by category
         if (filterCategory !== "All" && transaction.category !== filterCategory) {
             return false;
         }
-
-        // Filter by date range
         const transactionDate = new Date(transaction.date);
         if (
             (startDate && transactionDate < new Date(startDate)) ||
@@ -24,7 +21,6 @@ const TransactionList = () => {
         ) {
             return false;
         }
-
         return true;
     });
 
@@ -79,25 +75,33 @@ const TransactionList = () => {
                     </tr>
                 </thead>
                 <tbody>
-                    {filteredTransactions.length > 0 ? (
-                        filteredTransactions.map((transaction) => (
-                            <tr key={transaction.id}>
-                                <td>{transaction.date}</td>
-                                <td>
-                                    {transaction.category === "Expense" ? "-" : "+"}$
-                                    {transaction.amount.toFixed(2)}
+                    <TransitionGroup component={null}>
+                        {filteredTransactions.length > 0 ? (
+                            filteredTransactions.map((transaction) => (
+                                <CSSTransition
+                                    key={transaction.id}
+                                    timeout={500}
+                                    classNames="transaction"
+                                >
+                                    <tr>
+                                        <td>{transaction.date}</td>
+                                        <td>
+                                            {transaction.category === "Expense" ? "-" : "+"}$
+                                            {transaction.amount.toFixed(2)}
+                                        </td>
+                                        <td>{transaction.category}</td>
+                                        <td>{transaction.comment || "-"}</td>
+                                    </tr>
+                                </CSSTransition>
+                            ))
+                        ) : (
+                            <tr>
+                                <td colSpan="4" className="text-center">
+                                    No transactions found.
                                 </td>
-                                <td>{transaction.category}</td>
-                                <td>{transaction.comment || "-"}</td>
                             </tr>
-                        ))
-                    ) : (
-                        <tr>
-                            <td colSpan="4" className="text-center">
-                                No transactions found.
-                            </td>
-                        </tr>
-                    )}
+                        )}
+                    </TransitionGroup>
                 </tbody>
             </table>
         </div>
