@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { fetchCurrencyRates } from "../utils/currencyUtils";
+import { fetchCurrencyRates } from "../../utils/currencyUtils";
 
 const ExchangeRates = () => {
     const [rates, setRates] = useState({});

@@ -15,9 +15,9 @@ function NavBar() {
             style={{ maxHeight: '100px' }}
             navbarScroll
           >
-            <Nav.Link><Link to="/" className='text-decoration-none text-white'>Home</Link></Nav.Link>
-            <Nav.Link><Link to="add-transaction" className='text-decoration-none text-white'>Add Transaction</Link></Nav.Link>
-            <Nav.Link> <Link to="dashboard" className='text-decoration-none text-white'>Dashboard</Link></Nav.Link>
+            <Link to="/" className='text-decoration-none text-white mx-2'>Home</Link>
+            <Link to="add-transaction" className='text-decoration-none text-white mx-2'>Add Transaction</Link>
+            <Link to="dashboard" className='text-decoration-none text-white mx-2'>Dashboard</Link>
           </Nav>
         </Navbar.Collapse>
       </Container>

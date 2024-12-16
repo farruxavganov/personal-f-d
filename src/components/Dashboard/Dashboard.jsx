@@ -2,10 +2,10 @@ import React from "react";
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
-import TransactionList from "../TransactionList";
-import Summary from "../Summary";
-import Charts from "../Charts";
-import ExchangeRetes from "../ExchangeRates";
+import TransactionList from "../TransactionList/TransactionList";
+import Summary from "../Summary/Summary";
+import Charts from "../Charts/Charts";
+import ExchangeRetes from "../ExchangeRates/ExchangeRates";
 import "./Dashboard.css";
 
 const Dashboard = () => {

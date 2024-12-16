@@ -1,6 +1,6 @@
 import React, { useContext } from "react";
 import { Pie, Line } from "react-chartjs-2";
-import { FinanceContext } from "../context/FinanceContext";
+import { FinanceContext } from "../../context/FinanceContext";
 import {
     Chart as ChartJS,
     ArcElement,

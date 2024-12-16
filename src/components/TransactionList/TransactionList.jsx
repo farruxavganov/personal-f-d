@@ -1,5 +1,5 @@
 import React, { useContext, useState } from "react";
-import { FinanceContext } from "../context/FinanceContext";
+import { FinanceContext } from "../../context/FinanceContext";
 import { CSSTransition, TransitionGroup } from "react-transition-group";
 import "./TransactionList.css"; // Add a CSS file for animations
 

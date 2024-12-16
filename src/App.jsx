@@ -1,10 +1,12 @@
 import React from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { FinanceProvider } from "./context/FinanceContext";
-import Layout from "./components/Layout";
-import TransactionForm from "./components/TransactionForm";
-import CurrencyConverter from "./components/CurrencyConverter";
-import Dashboard from "./components/Dashboard/Dashboard";
+import {
+    Layout,
+    TransactionForm,
+    CurrencyConverter,
+    Dashboard
+} from "./components";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./App.css";
 
