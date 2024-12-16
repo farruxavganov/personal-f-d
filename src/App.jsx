@@ -1,30 +1,26 @@
 import React from "react";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { FinanceProvider } from "./context/FinanceContext";
-import CurrencyConverter from "./components/CurrencyConverter";
+import Layout from "./components/Layout";
 import TransactionForm from "./components/TransactionForm";
-import TransactionList from "./components/TransactionList";
-import Summary from "./components/Summary";
-import Charts from "./components/Charts";
-import ExchangeRates from "./components/ExchangeRates";
+import CurrencyConverter from "./components/CurrencyConverter";
+import Dashboard from "./components/Dashboard/Dashboard";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./App.css";
-import Dashboard from "./components/Dashboard/Dashboard";
 
 const App = () => {
     return (
-        <FinanceProvider>
-            <div className="container">
-                <h1 className="text-center my-4">Personal Finance Dashboard</h1>
-                {/* <CurrencyConverter />
-                <TransactionForm />
-                <TransactionList />
-                <Summary />
-                <Charts />
-                <ExchangeRates /> */}
-                <Dashboard />
-
-            </div>
-        </FinanceProvider>
+        <BrowserRouter>
+            <FinanceProvider>
+                <Routes>
+                    <Route path="/" element={<Layout />}>
+                        <Route index element={<CurrencyConverter />} />
+                        <Route path="add-transaction" element={<TransactionForm />} />
+                        <Route path="dashboard" element={<Dashboard />} />
+                    </Route>
+                </Routes>  
+            </FinanceProvider>
+        </BrowserRouter>
     );
 };
 
