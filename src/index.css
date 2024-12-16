@@ -13,6 +13,11 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+#root {
+  padding: 0 !important;
+  max-width: 100% !important;
+}
+
 a {
   font-weight: 500;
   color: #646cff;
@@ -26,6 +31,7 @@ body {
   margin: 0;
   min-width: 320px;
   min-height: 100vh;
+  background-color: #eceef1 !important;
 }
 
 h1 {

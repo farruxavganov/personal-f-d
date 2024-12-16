@@ -5,7 +5,13 @@ const Layout = () => {
   return (
     <>
       <NavBar />
-      <div className="container">
+      <div className="container d-flex justify-content-center align-items-center"
+        style={
+            {
+                minHeight: "80vh"
+            }
+        }
+      >
           <Outlet />
       </div>
     </>
