@@ -8,18 +8,21 @@ import Charts from "./components/Charts";
 import ExchangeRates from "./components/ExchangeRates";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./App.css";
+import Dashboard from "./components/Dashboard/Dashboard";
 
 const App = () => {
     return (
         <FinanceProvider>
             <div className="container">
                 <h1 className="text-center my-4">Personal Finance Dashboard</h1>
-                <CurrencyConverter />
+                {/* <CurrencyConverter />
                 <TransactionForm />
                 <TransactionList />
                 <Summary />
                 <Charts />
-                <ExchangeRates />
+                <ExchangeRates /> */}
+                <Dashboard />
+
             </div>
         </FinanceProvider>
     );
