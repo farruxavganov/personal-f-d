@@ -19,26 +19,36 @@ const ExchangeRates = () => {
     }, []);
 
     return (
-        <div className="card p-3 mb-4">
+        <div className="card border-0 shadow p-3 mb-5 bg-body rounded p-3 mb-4">
             <h5>Exchange Rates</h5>
             {error && <p className="text-danger">{error}</p>}
             {!error && (
-                <table className="table table-striped">
-                    <thead>
-                        <tr>
-                            <th>Currency</th>
-                            <th>Rate</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        {Object.entries(rates).map(([currency, rate]) => (
-                            <tr key={currency}>
-                                <td>{currency}</td>
-                                <td>{rate.toFixed(2)}</td>
+                <div
+                style={{
+                    maxHeight: "100px",
+                    overflowY: "auto",
+                    overflowX: "hidden",
+                    border: "1px solid #dee2e6",
+                    borderRadius: "5px",
+                  }}
+                >
+                    <table className="table table-striped">
+                        <thead>
+                            <tr>
+                                <th>Currency</th>
+                                <th>Rate</th>
                             </tr>
-                        ))}
-                    </tbody>
-                </table>
+                        </thead>
+                        <tbody>
+                            {Object.entries(rates).map(([currency, rate]) => (
+                                <tr key={currency}>
+                                    <td>{currency}</td>
+                                    <td>{rate.toFixed(2)}</td>
+                                </tr>
+                            ))}
+                        </tbody>
+                    </table>
+                </div>
             )}
         </div>
     );

@@ -32,7 +32,7 @@ const TransactionForm = () => {
     };
 
     return (
-        <div className="card p-3 mb-4">
+        <div className="card border-0 shadow p-3 mb-5 bg-body rounded p-3 mb-4">
             <h5>Add Transaction</h5>
             <form onSubmit={handleSubmit}>
                 <div className="row">

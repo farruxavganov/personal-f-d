@@ -16,19 +16,19 @@ const Summary = () => {
     const netBalance = totalIncome - totalExpense;
 
     return (
-        <div className="card p-3 mb-4">
+        <div className="card border-0 shadow p-3 mb-5 bg-body rounded p-3 mb-4">
             <h5>Financial Summary</h5>
             <div className="row text-center">
                 <div className="col-md-4">
                     <div className="summary-box bg-success text-white p-3 rounded">
-                        <h6>Total Income</h6>
-                        <h4>+${totalIncome.toFixed(2)}</h4>
+                        <h6 className="small">Total Income</h6>
+                        <h4 className="small">+${totalIncome.toFixed(2)}</h4>
                     </div>
                 </div>
                 <div className="col-md-4">
                     <div className="summary-box bg-danger text-white p-3 rounded">
-                        <h6>Total Expense</h6>
-                        <h4>-${totalExpense.toFixed(2)}</h4>
+                        <h6 className="small">Total Expense</h6>
+                        <h4 className="small">-${totalExpense.toFixed(2)}</h4>
                     </div>
                 </div>
                 <div className="col-md-4">
@@ -37,8 +37,8 @@ const Summary = () => {
                             netBalance >= 0 ? "bg-primary" : "bg-warning text-dark"
                         }`}
                     >
-                        <h6>Net Balance</h6>
-                        <h4>
+                        <h6 className="small">Net Balance</h6>
+                        <h4 className="small">
                             {netBalance >= 0 ? "+" : "-"}${Math.abs(netBalance).toFixed(2)}
                         </h4>
                     </div>

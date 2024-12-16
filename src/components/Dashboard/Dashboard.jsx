@@ -6,10 +6,11 @@ import TransactionList from "../TransactionList";
 import Summary from "../Summary";
 import Charts from "../Charts";
 import ExchangeRetes from "../ExchangeRates";
+import "./Dashboard.css";
 
 const Dashboard = () => {
     return (
-        <Container>
+        <Container className="dashboard">
             <Row>
                 <Col lg={8}>
                   <Row className="flex-column">

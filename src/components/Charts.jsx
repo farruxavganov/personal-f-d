@@ -90,7 +90,7 @@ const Charts = () => {
     };
 
     return (
-        <div className="card p-3 mb-4">
+        <div className="card border-0 shadow p-3 mb-5 bg-body roundedp-3 mb-4">
             <h5>Financial Charts</h5>
             <div className="row">
                 {/* Pie Chart */}

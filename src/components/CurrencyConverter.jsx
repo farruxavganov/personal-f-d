@@ -9,7 +9,7 @@ const CurrencyConverter = () => {
     const convertedAmount = (amount * (currencyRates[targetCurrency] || 1)).toFixed(2);
 
     return (
-        <div className="card p-3 mb-4">
+        <div className="card border-0 shadow p-3 mb-5 bg-body rounded p-3 mb-4">
             <h5>Currency Converter</h5>
             <div className="form-group">
                 <label>Base Currency:</label>
